@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace week_3
+namespace ConsoleApp39
 {
     class Program
     {
@@ -31,10 +31,7 @@ namespace week_3
 
             if (a == b) { Console.WriteLine("same"); }
             else
-            {
-                Console.WriteLine("different obj refs");
-                Console.ReadLine();
-            }
+            { Console.WriteLine("different obj refs"); }
         }
     }
     class Village
@@ -65,7 +62,6 @@ namespace week_3
             this.MapInitializer();
             this.LookForAstrilde();
             Console.WriteLine("Hugi found Astrilde in " + Current.VillageName);
-            Console.ReadLine();
         }
 
         public void MapInitializer()
@@ -90,25 +86,7 @@ namespace week_3
         }
 
 
-        public void LookForAstrilde()
-        {
-            Current = Maple;
-            while (Current.nextVillage != null)
-            {
-                if (Current.isAstrildeHere)
-                {
-                    Console.WriteLine(" Found Astrilde");
-                    Console.ReadLine();
-                    return;
-                }
-                else
-                {
-                    Current = Current.nextVillage;
-                }
-            }
-
-
-        }
     }
 
 }
+
